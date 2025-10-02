@@ -28,7 +28,7 @@ class EstudianteUpdate(BaseModel):
     edad: Optional[int] = Field(None, gt=0, description="Edad del estudiante (opcional). Debe ser mayor que 0.")
     correo: Optional[EmailStr] = Field(None, description="Correo electrónico (opcional). Debe ser único.")
     telefono: Optional[str] = Field(None, min_length=7, max_length=15, description="Número de teléfono (opcional).")
-    foto_url: Optional[HttpUrl] = Field(None, description="URL de la foto (opcional).")
+    foto_url: Optional[str] = Field(None, description="URL de la foto (opcional).")
 
 
 
