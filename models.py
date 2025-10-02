@@ -15,16 +15,18 @@ class Estudiante(Base):
     id = Column(Integer, primary_key=True, index=True, autoincrement=True)
     
     # Columna 'nombre': Texto, requerido
-    nombre = Column(String, nullable=False)
+    nombre = Column(String(200), nullable=False)
     
     # Columna 'edad': Entero, requerido
     edad = Column(Integer, nullable=False)
     
     # Columna 'email': Texto, requerido, único
-    correo = Column(String, nullable=False)
+    correo = Column(String(200), nullable=False)
+
+    telefono = Column(String(50), nullable=False)
     
     # Columna 'foto_url': Texto (URL)
-    foto_url = Column(String, nullable=True) 
+    foto_url = Column(Text, nullable=True) 
     
     def __repr__(self):
-        return f"<Estudiante(id={self.id}, nombre='{self.nombre}', edad='{self.edad}, email='{self.correo}', foto_url='{self.foto_url})>"
+        return f"<Estudiante(id={self.id}, nombre='{self.nombre}', edad='{self.edad}, correo='{self.correo}', telefono='{self.telefono}', foto_url='{self.foto_url})>"
