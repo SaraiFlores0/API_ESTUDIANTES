@@ -16,10 +16,11 @@ if not DATABASE_URL:
     DATABASE_URL = "postgresql://dummy:dummy@localhost:5432/dummy"
 
 
-engine = create_engine(
-    DATABASE_URL, 
-    pool_pre_ping=True
-)
+try:
+    engine = create_engine(DATABASE_URL)
+    print("Conectado a la BD correctamente")
+except SQLAlchemyError as e:
+    print(f"Error al conectar a la BD: {e}")
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
