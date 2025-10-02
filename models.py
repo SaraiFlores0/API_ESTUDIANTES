@@ -21,10 +21,10 @@ class Estudiante(Base):
     edad = Column(Integer, nullable=False)
     
     # Columna 'email': Texto, requerido, único
-    email = Column(String, unique=True, index=True, nullable=False)
+    correo = Column(String, unique=True, index=True, nullable=False)
     
     # Columna 'foto_url': Texto (URL)
     foto_url = Column(String, nullable=True) 
     
     def __repr__(self):
-        return f"<Estudiante(id={self.id}, nombre='{self.nombre}',  edad='{self.edad}, email='{self.email}',  foto_url='{self.foto_url})>"
+        return f"<Estudiante(id={self.id}, nombre='{self.nombre}', edad='{self.edad}, email='{self.correo}', foto_url='{self.foto_url})>"
