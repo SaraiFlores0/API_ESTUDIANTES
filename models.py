@@ -27,4 +27,4 @@ class Estudiante(Base):
     foto_url = Column(String, nullable=True) 
     
     def __repr__(self):
-        return f"<Estudiante(id={self.id}, nombre='{self.nombre}', email='{self.email}')>"
+        return f"<Estudiante(id={self.id}, nombre='{self.nombre}',  edad='{self.edad}, email='{self.email}',  foto_url='{self.foto_url})>"
