@@ -12,7 +12,7 @@ class EstudianteBase(BaseModel):
 
     telefono: str = Field(..., min_length=7, max_length=15, description="Número de teléfono del estudiante.")
     
-    foto_url: HttpUrl = Field(..., description="URL de la foto del estudiante (de Firebase, etc.).")
+    foto_url: str = Field(..., description="URL de la foto del estudiante (de Firebase, etc.).")
     
 
     class Config:
