@@ -21,7 +21,7 @@ class Estudiante(Base):
     edad = Column(Integer, nullable=False)
     
     # Columna 'email': Texto, requerido, único
-    correo = Column(String, unique=True, index=True, nullable=False)
+    correo = Column(String, nullable=False)
     
     # Columna 'foto_url': Texto (URL)
     foto_url = Column(String, nullable=True) 
